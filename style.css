@@ -1,0 +1,392 @@
+/* =========================================================
+   MBG - SPPG Garut Pakenjeng Depok
+   Yayasan Jabar Bima Pratama
+   Navy + Emas + Putih | Mobile-first | Bersih & Modern
+   ========================================================= */
+
+:root {
+  --sppg-navy-dark:   #0F1B45;
+  --sppg-navy:         #1B2A63;
+  --sppg-navy-light:   #2E3F82;
+  --sppg-gold:         #F0B429;
+  --sppg-gold-dark:    #D69A0F;
+  --sppg-gold-pale:    #FDF1D6;
+  --sppg-cream:        #FFFBF3;
+  --sppg-white:        #FFFFFF;
+  --sppg-text:         #1C2333;
+  --sppg-text-muted:   #5A6178;
+  --sppg-border:       #E7E1CF;
+  --sppg-radius:       16px;
+  --font-display: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body:    'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--sppg-cream);
+  color: var(--sppg-text);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ===== HEADER ===== */
+.mbg-header {
+  background: linear-gradient(160deg, var(--sppg-navy-dark), var(--sppg-navy) 70%);
+  padding: 2rem 1rem 3.25rem;
+  position: relative;
+  color: var(--sppg-white);
+}
+
+.mbg-header-inner {
+  text-align: center;
+}
+
+.mbg-logo-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.mbg-logo {
+  display: block;
+  border-radius: 50%;
+  background-color: var(--sppg-white);
+  box-shadow: 0 0 0 3px rgba(240, 180, 41, 0.55);
+}
+
+.mbg-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.55rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+.mbg-kitchen-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--sppg-gold);
+  margin: 0 0 0.15rem;
+  letter-spacing: 0.3px;
+}
+
+.mbg-kitchen-org {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin: 0 0 0.6rem;
+  opacity: 0.85;
+}
+
+.mbg-subtitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.85;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(240, 180, 41, 0.3);
+  display: inline-block;
+}
+
+.mbg-header-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 28px;
+  background: var(--sppg-cream);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  transform: scaleX(1.3);
+}
+
+/* ===== MAIN ===== */
+.mbg-main {
+  flex: 1;
+  max-width: 640px;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* ===== STATE BOX (loading & error) ===== */
+.mbg-state-box {
+  padding: 3rem 1rem;
+}
+
+.mbg-state-text {
+  font-size: 1rem;
+  color: var(--sppg-text-muted);
+  font-weight: 500;
+}
+
+.mbg-error-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* ===== TANGGAL ===== */
+.mbg-date-section {
+  margin-bottom: 1.5rem;
+}
+
+.mbg-date-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--sppg-text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.mbg-date-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--sppg-navy);
+  margin: 0;
+}
+
+/* ===== CARDS ===== */
+.mbg-card {
+  border: 1px solid var(--sppg-border);
+  border-radius: var(--sppg-radius);
+  box-shadow: 0 3px 14px rgba(15, 27, 69, 0.08);
+  background-color: var(--sppg-white);
+}
+
+.mbg-card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--sppg-navy);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mbg-card-icon {
+  font-size: 1.2rem;
+}
+
+.mbg-card-subtitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--sppg-navy);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--sppg-border);
+}
+
+/* ===== MENU LIST ===== */
+.mbg-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mbg-menu-list li {
+  padding: 0.65rem 0.9rem;
+  background-color: var(--sppg-gold-pale);
+  border-left: 3px solid var(--sppg-gold);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--sppg-navy-dark);
+}
+
+.mbg-menu-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--sppg-gold-dark);
+}
+
+/* ===== TABLE GIZI ===== */
+.mbg-table {
+  margin-bottom: 0;
+}
+
+.mbg-table thead th {
+  background-color: var(--sppg-navy);
+  color: var(--sppg-white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border: none;
+  padding: 0.6rem 0.6rem;
+  white-space: nowrap;
+}
+
+.mbg-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.mbg-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.mbg-table tbody td {
+  padding: 0.6rem 0.6rem;
+  font-size: 0.9rem;
+  vertical-align: middle;
+  border-color: var(--sppg-border);
+  white-space: nowrap;
+}
+
+.mbg-table tbody tr:nth-child(even) {
+  background-color: var(--sppg-gold-pale);
+}
+
+.mbg-table tbody td:nth-child(2),
+.mbg-table tbody td:nth-child(3) {
+  font-weight: 700;
+  color: var(--sppg-navy);
+}
+
+.mbg-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--sppg-text);
+}
+
+/* ===== CATATAN ===== */
+.mbg-note-text {
+  font-size: 0.95rem;
+  color: var(--sppg-text-muted);
+  line-height: 1.55;
+}
+
+/* ===== SOSIAL MEDIA ===== */
+.mbg-social-section {
+  margin-bottom: 0.5rem;
+}
+
+.mbg-social-heading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--sppg-text-muted);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.mbg-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.mbg-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  background-color: var(--sppg-navy);
+  color: var(--sppg-white);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background-color 0.15s ease;
+}
+
+.mbg-social-link:hover,
+.mbg-social-link:focus-visible {
+  background-color: var(--sppg-navy-dark);
+  color: var(--sppg-white);
+}
+
+.mbg-social-link svg {
+  flex-shrink: 0;
+}
+
+/* ===== FOOTER ===== */
+.mbg-footer {
+  background-color: var(--sppg-navy-dark);
+  color: var(--sppg-white);
+  padding: 1.25rem 1rem;
+}
+
+.mbg-footer-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.mbg-footer-sub {
+  font-size: 0.78rem;
+  color: var(--sppg-gold);
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE (Desktop) ===== */
+@media (min-width: 768px) {
+  .mbg-title {
+    font-size: 2rem;
+  }
+
+  .mbg-kitchen-name {
+    font-size: 1.2rem;
+  }
+
+  .mbg-subtitle {
+    font-size: 1rem;
+  }
+
+  .mbg-date-value {
+    font-size: 2.1rem;
+  }
+
+  .mbg-card-title {
+    font-size: 1.3rem;
+  }
+
+  .mbg-menu-list li {
+    font-size: 1.02rem;
+  }
+}
+
+/* ===== ACCESSIBILITY: focus visible ===== */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--sppg-gold);
+  outline-offset: 2px;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
